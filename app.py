@@ -14,11 +14,11 @@ with open(f"{file_path}/weights/lg.pkl", 'rb') as f:
 
 
 
-st.title("Email Spam Classifier 🚀")
+st.title("Email Spam Classifier")
 
 email_text = st.text_area("Enter the email content:")
 
-model_choice = st.selectbox("Choose a model:", ["Naïve Bayes", "Logistic Regression"])
+model_choice = st.selectbox("Select a model:", ["Naïve Bayes", "Logistic Regression"])
 
 if st.button("Classify Email"):
     if email_text:
@@ -36,3 +36,4 @@ if st.button("Classify Email"):
         st.subheader(f"Prediction: {result}")
     else:
         st.warning("Please enter an email to classify.")
+
